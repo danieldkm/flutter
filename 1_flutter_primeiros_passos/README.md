@@ -44,3 +44,22 @@ Ctrl + Shift + p
 e digite flutter new project.
 
 <img src="img2.png"/>
+
+
+## Iniciando o emulador do IOS (Iphone) e Rodando o seu projeto nele
+1. Verificar se existe o xcode, caso não tenha deve instalar. 
+  
+    a. Abra a `App Store` e procure pelo `Xcode`
+
+2. Abrar o VS Code e inicie o emular clicando em `No Device`.
+
+3. Para abrir o projeto, basta clicar com o botão direito na pasta `ios` e selecionar `Open in Xcode` ou abrir o arquivo Runner.xcworkspace `open ios/Runner.xcworkspace`
+
+## Preparando e rodando seu aplicativo no Aparelho Físico Android
+- Programa para emular o dispositivo fisico no pc com `Wormhole`
+
+1. Vá em `Configurações` -> `Sobre o telefone` -> `Informações do software` -> `Número de compilação`.
+2. clique várias vezes no `Número de compilação` para ativar o modo desenvolvedor, irá aparecer uma mensagem.
+3. Vá em `Configurações` -> `Opções do desenvolvedor`
+4. Habilitar a opção `Permanecer ativo`.
+5. Habilitar a opção `Depuração USB`.
