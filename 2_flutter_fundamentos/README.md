@@ -101,3 +101,13 @@ flutter create --project-name=flutter_fundamentos --org br.com.danielmorita --pl
 ## StatelessWidget e StatefulWidget
 - StatelessWidget: componente estatico.
 - StatefulWidget: que tem estado.
+
+## Árvore de Componentes
+<img src="img1.png"/>
+
+## Ciclo de vida
+
+<img src="img2.png"/>
+
+initState: não pode ser um Future, deve utilizar o `then`
+<img src="img3.png"/>

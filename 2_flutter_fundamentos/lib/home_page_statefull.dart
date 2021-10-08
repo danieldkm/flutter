@@ -10,10 +10,27 @@ class HomePageStatefull extends StatefulWidget {
 class _HomePageStatefullState extends State<HomePageStatefull> {
   String texto = 'Estou no StatelessWidget';
 
+  _HomePageStatefullState() {
+    print('constructor _HomePageStatefullState');
+  }
+
   @override
   void initState() {
+    print('initState');
     super.initState();
-    texto = 'Texto alterado pelo initState';
+    // texto = 'Texto alterado pelo initState';
+  }
+
+  @override
+  void didChangeDependencies() {
+    print('didChangeDependencies');
+    super.didChangeDependencies();
+  }
+
+  @override
+  void didUpdateWidget(covariant HomePageStatefull oldWidget) {
+    print('didUpdateWidget');
+    super.didUpdateWidget(oldWidget);
   }
 
   @override
