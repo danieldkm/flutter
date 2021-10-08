@@ -15,6 +15,9 @@
   - [Qual a diferença entre o hot reload e o hot restart?](#qual-a-diferença-entre-o-hot-reload-e-o-hot-restart)
 - [Widget o que é?](#widget-o-que-é)
 - [StatelessWidget e StatefulWidget](#statelesswidget-e-statefulwidget)
+- [Árvore de Componentes](#árvore-de-componentes)
+- [Ciclo de vida](#ciclo-de-vida)
+- [Executando funções depois da tela pronta (addPostFrameCallback)](#executando-funções-depois-da-tela-pronta-addpostframecallback)
 ---
 ## O que é Flutter
 - Flutter é o kit de ferramentas de IU portátil do Google para a criação de aplicativos bonitos e compilados de forma nativa para dispositivos móveis, web e desktop a partir de uma única base de código.
@@ -102,7 +105,7 @@ flutter create --project-name=flutter_fundamentos --org br.com.danielmorita --pl
 - StatelessWidget: componente estatico.
 - StatefulWidget: que tem estado.
 
-## Árvore de Componentes
+## árvore de Componentes
 <img src="img1.png"/>
 
 ## Ciclo de vida
@@ -111,3 +114,18 @@ flutter create --project-name=flutter_fundamentos --org br.com.danielmorita --pl
 
 initState: não pode ser um Future, deve utilizar o `then`
 <img src="img3.png"/>
+
+## Executando funções depois da tela pronta (addPostFrameCallback)
+- addPostFrameCallback, espera renderizar o widget para fazer algo.
+```dart
+  @override
+  void initState() {
+    WidgetsBinding.instance?.addPostFrameCallback((timeStamp) {
+      Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (context) => HomePage(),
+        ),
+      );
+    });
+  }
+```
