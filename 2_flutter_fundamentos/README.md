@@ -2,10 +2,23 @@
 
 [Para saber mais](https://flutter.dev/docs/resources/faq)
 
+---
+
+- [O que é Flutter](#o-que-é-flutter)
+  - [Para quem é o Flutter?](#para-quem-é-o-flutter)
+  - [Quanta experiência de desenvolvimento eu preciso para usar o Flutter?](#quanta-experiência-de-desenvolvimento-eu-preciso-para-usar-o-flutter)
+  - [O que torna o Flutter único?](#o-que-torna-o-flutter-único)
+  - [Com qual tecnologia o Flutter é construído?](#com-qual-tecnologia-o-flutter-é-construído)
+  - [Como o Flutter executar meu código no Android?](#como-o-flutter-executar-meu-código-no-android)
+  - [Como o Flutter executar meu código no IOS?](#como-o-flutter-executar-meu-código-no-ios)
+  - [Por que o Flutter escolheu usar o Dart?](#por-que-o-flutter-escolheu-usar-o-dart)
+  - [Qual a diferença entre o hot reload e o hot restart?](#qual-a-diferença-entre-o-hot-reload-e-o-hot-restart)
+- [Widget o que é?](#widget-o-que-é)
+---
 ## O que é Flutter
 - Flutter é o kit de ferramentas de IU portátil do Google para a criação de aplicativos bonitos e compilados de forma nativa para dispositivos móveis, web e desktop a partir de uma única base de código.
 
-## Para quem é o Flutter?
+### Para quem é o Flutter?
 
 **Para Usuários**
 - Para os usuários, o Flutter dá vida aos aplicativos.
@@ -22,20 +35,20 @@
 - O Flutter permite a unifiação de desenvolvedores de apps em uma única equipe para dispositivos móveis, web e desktop, construindo aplicativos para várias plataformas a partir de uma única base de código.
 - Flutter acelera o desenvolvimento e sincroniza cronogramas de lançamento em toda a base de clientes.
 
-## Quant experiência de desenvolvimento eu preciso para usar o Flutter?
+### Quanta experiência de desenvolvimento eu preciso para usar o Flutter?
 - Flutter é acessível a programadores familiarizados com conceitos orientados a objetos (classes, métodos, variáveis, etc) e conceitos de programação imperativos (loops, condicionais, etc).
 
-## O que torna o Flutter único?
+### O que torna o Flutter único?
 - Flutter é diferente da maioria das outras plataformas para construir aplicativos móveis porque não depende da tecnlogia de navegador da web nem do conjunto de componentes que vem com cada dispositivo.
 - Em vez disso, o Flutter usa seu próprio mecanismo de renderização de alto desempenho para desenhar os componentes.
 - Além disso, o Flutter é diferente porque possui apenas uma camada fina de código C/C++.
 - O Flutter implementa a maior parte de seu sistema (composição, gestos, animação, estrutura, widgets, etc.) em Dart (uma linguagem moderna, concisa e orientada a objetos) que pode ser customizada de forma simples e fácil.
 - Isso dá aos desenvolvedores um tremendo controle sobre o sistema, bem como reduz significativamente o nível de acessibilidade para a maioria do sistema.
 
-## Com qual tecnologia o Flutter é construído?
+### Com qual tecnologia o Flutter é construído?
 
 - Flutter é constuído em C, C++, Dart e Skia (um mecanismo de renderização 2D).
-## Como o Flutter executar meu código no Android?
+### Como o Flutter executar meu código no Android?
 - Os códigos C e C++ são compilados com o NDK do android.
 - O código Dart (o SDK e o seu) são compilados com antecedência (AOT) em bibliotecas nativas, ARM e x86.
 - Essas bibliotecas estão incluídas em um projeto Android "runner", e tudo está integrado em um .apk.
@@ -43,13 +56,13 @@
 - Durante o modo de depuração, o Flutter usa uma máquina virtual (VM) para executar seu código a fim de habilitar o hot reload, um recurso que permite fazer alterações no código em execução sem recompilação.
 - Você verá um banner de "depuração" no canto superior direito do seu aplicativo ao executar neste modo, para lembrá-lo de que o desempenho não é uma característica do aplicativo finalizado.
 
-## Como o Flutter executar meu código no IOS?
+### Como o Flutter executar meu código no IOS?
 - Os códigos C e C++ do mecanismo são compilados com **LLVM**.
 - O código Dart (o SDK e o seu) são compilados com antecedência (AOT) em uma biblioteca ARM nativa.
 - Essa biblioteca está incluída em um projeto iOS "runner" e tudo está integrado em um **.ipa**.
 - O restante é igual do android.
 
-## Por que o Flutter escolheu usar o Dart?
+### Por que o Flutter escolheu usar o Dart?
 - dart runtimes suporta a combinação de dois recursos críticos para Flutter:
   - Um ciclo de desenvolvimento rápido baseado em **JIT (Just in Time)** que permite a mudança e recarragamentos dinâmicos com uma linguagem com tipos, além de um compilador **AOT (Ahead-of-Time)** que emite código compilado eficiente para inicialização rápida e desempenho previsível de implantações de produção.
   - o JIT é utilizando em tempo de desenvolvimento e ja o AOT é a compilação da implementação com todas as precauções e otimização para deixar enxuto.
@@ -65,7 +78,7 @@
   - Alocação de memória rápida
     - Aloca de forma eficiente as variáveis em memoria, pois o alocamos variáveis pequnas e tempo de vida curto.
 
-## Qual a diferença entre o hot reload e o hot restart?
+### Qual a diferença entre o hot reload e o hot restart?
 
 - hot reload:
   - atualiza o app quando o código é alterado e salvado.
@@ -73,3 +86,13 @@
 
 - hot restart:
   - redefine o estado para o estado inicial do aplicativo.
+
+
+## Widget o que é
+- Tudo é dentro do flutter é Widget
+```bash
+flutter create --project-name=flutter_fundamentos --org br.com.danielmorita --platforms android,ios -a kotlin -i swift ./flutter_fundamentos
+```
+- Existe dois tipos de widgets
+  - Que aparece na tela, exemplo: Text, Button, Icon...
+  - Que não aparece na tela, exemplo: Center, Column...
