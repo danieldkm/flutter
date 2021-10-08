@@ -14,6 +14,7 @@
   - [Por que o Flutter escolheu usar o Dart?](#por-que-o-flutter-escolheu-usar-o-dart)
   - [Qual a diferença entre o hot reload e o hot restart?](#qual-a-diferença-entre-o-hot-reload-e-o-hot-restart)
 - [Widget o que é?](#widget-o-que-é)
+- [StatelessWidget e StatefulWidget](#statelesswidget-e-statefulwidget)
 ---
 ## O que é Flutter
 - Flutter é o kit de ferramentas de IU portátil do Google para a criação de aplicativos bonitos e compilados de forma nativa para dispositivos móveis, web e desktop a partir de uma única base de código.
@@ -96,3 +97,7 @@ flutter create --project-name=flutter_fundamentos --org br.com.danielmorita --pl
 - Existe dois tipos de widgets
   - Que aparece na tela, exemplo: Text, Button, Icon...
   - Que não aparece na tela, exemplo: Center, Column...
+
+## StatelessWidget e StatefulWidget
+- StatelessWidget: componente estatico.
+- StatefulWidget: que tem estado.
