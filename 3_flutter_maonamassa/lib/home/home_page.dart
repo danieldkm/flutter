@@ -36,6 +36,45 @@ import 'package:flutter/material.dart';
 //   }
 // }
 
+// aula Container
+// class HomePage extends StatelessWidget {
+//   const HomePage({Key? key}) : super(key: key);
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text('Home Page'),
+//       ),
+//       body: Center(
+//         child: Container(
+//           width: 200,
+//           height: 200,
+//           margin: EdgeInsets.all(10),
+//           padding: EdgeInsets.all(10),
+//           // color: Colors.red,
+//           decoration: BoxDecoration(
+//             color: Colors.red,
+//             borderRadius: BorderRadius.circular(30),
+//             boxShadow: [
+//               BoxShadow(
+//                 color: Colors.black,
+//                 blurRadius: 20,
+//                 offset: Offset(10, 10),
+//               ),
+//               BoxShadow(
+//                 color: Colors.green,
+//                 blurRadius: 20,
+//                 offset: Offset(-10, -10),
+//               ),
+//             ],
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
+
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -43,31 +82,48 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home Page'),
+        title: Text(
+          'Home Page',
+          style: TextStyle(
+            fontFamily: 'DancingScript',
+          ),
+        ),
       ),
       body: Center(
-        child: Container(
-          width: 200,
-          height: 200,
-          margin: EdgeInsets.all(10),
-          padding: EdgeInsets.all(10),
-          // color: Colors.red,
-          decoration: BoxDecoration(
-            color: Colors.red,
-            borderRadius: BorderRadius.circular(30),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black,
-                blurRadius: 20,
-                offset: Offset(10, 10),
+        child: Column(
+          children: [
+            Text(
+              'Custom Font',
+              style: TextStyle(
+                fontFamily: 'DancingScript',
+                fontWeight: FontWeight.w700,
+                fontSize: 40,
               ),
-              BoxShadow(
-                color: Colors.green,
-                blurRadius: 20,
-                offset: Offset(-10, -10),
+            ),
+            Container(
+              width: 200,
+              height: 200,
+              margin: EdgeInsets.all(10),
+              padding: EdgeInsets.all(10),
+              // color: Colors.red,
+              decoration: BoxDecoration(
+                color: Colors.red,
+                borderRadius: BorderRadius.circular(30),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black,
+                    blurRadius: 20,
+                    offset: Offset(10, 10),
+                  ),
+                  BoxShadow(
+                    color: Colors.green,
+                    blurRadius: 20,
+                    offset: Offset(-10, -10),
+                  ),
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

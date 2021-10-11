@@ -62,7 +62,12 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
+  fonts:
+    - family: DancingScript
+      fonts: 
+        - asset: assets/fonts/DancingScript/DancingScript-Bold.ttf
+        - asset: assets/fonts/DancingScript/DancingScript-Regular.ttf
+
   #   - family: Schyler
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf
