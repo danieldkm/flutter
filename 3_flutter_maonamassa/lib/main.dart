@@ -6,6 +6,8 @@ import 'package:flutter_maonamassa/navegacao/page1.dart';
 import 'package:flutter_maonamassa/navegacao/page2.dart';
 import 'package:flutter_maonamassa/navegacao/page3.dart';
 import 'package:flutter_maonamassa/navegacao/page4.dart';
+import 'package:flutter_maonamassa/navegacao_params/detalhe.dart';
+import 'package:flutter_maonamassa/navegacao_params/lista.dart';
 
 void main() {
   runApp(MyApp());
@@ -21,6 +23,7 @@ class MyApp extends StatelessWidget {
       // home: HomePage(),
       // Nagecação por pagina.
       // home: navegacao.HomePage(),
+      initialRoute: Lista.routeName,
       // Navegação por nome
       routes: {
         '/': (_) => navegacao.HomePage(),
@@ -28,6 +31,8 @@ class MyApp extends StatelessWidget {
         Page2.routeName: (_) => Page2(),
         '/page3': (_) => Page3(),
         '/page4': (_) => Page4(),
+        Lista.routeName: (_) => Lista(),
+        Detalhe.routeName: (_) => Detalhe(),
       },
     );
   }
