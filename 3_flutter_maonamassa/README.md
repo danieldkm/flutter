@@ -62,6 +62,4 @@ flutter create --project-name=flutter_maonamassa --org br.com.danielmorita --pla
     - Page2 (não remove => Page2 é igual Page2)
     - Page1
 
-
-### Mão na massa
 ### Passando parametros
