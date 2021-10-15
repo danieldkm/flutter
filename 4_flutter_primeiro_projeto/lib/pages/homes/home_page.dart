@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
-enum PopupMenuPages { container }
+enum PopupMenuPages {
+  container,
+  rows_columns,
+}
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -19,6 +22,9 @@ class HomePage extends StatelessWidget {
                   case PopupMenuPages.container:
                     Navigator.pushNamed(context, '/container');
                     break;
+                  case PopupMenuPages.rows_columns:
+                    Navigator.pushNamed(context, '/rows_columns');
+                    break;
                 }
               },
               itemBuilder: (BuildContext context) {
@@ -26,6 +32,10 @@ class HomePage extends StatelessWidget {
                   PopupMenuItem<PopupMenuPages>(
                     child: Text('Container'),
                     value: PopupMenuPages.container,
+                  ),
+                  PopupMenuItem<PopupMenuPages>(
+                    child: Text('Rows & Columns'),
+                    value: PopupMenuPages.rows_columns,
                   )
                 ];
               })
