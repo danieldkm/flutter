@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_primeiro_projeto/pages/botoes_rotacao_texto/botoes_rotacao_texto_page.dart';
 import 'package:flutter_primeiro_projeto/pages/container/container_page.dart';
+import 'package:flutter_primeiro_projeto/pages/dialogs/dialogs_page.dart';
 import 'package:flutter_primeiro_projeto/pages/homes/home_page.dart';
 import 'package:flutter_primeiro_projeto/pages/layout_builder/layout_builder_page.dart';
 import 'package:flutter_primeiro_projeto/pages/media_query/media_query_page.dart';
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter primeiro projeto',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -36,6 +37,7 @@ class MyApp extends StatelessWidget {
         '/botoes_rotacao_texto': (_) => BotoesRotacaoTextoPage(),
         '/scrolls/single_child': (_) => SinglechildscrollviewPage(),
         '/scrolls/list_view': (_) => ListViewPage(),
+        '/dialogs': (_) => DialogsPage(),
       },
     );
   }

@@ -33,3 +33,5 @@ flutter create --project-name=flutter_primeiro_projeto --org br.com.danielmorita
 
 - trabalhando com scroll.
 - ListView utilizar esse widget sempre que a lista é muito grande.
+
+## Dialogs
