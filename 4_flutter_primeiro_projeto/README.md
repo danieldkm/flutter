@@ -28,3 +28,8 @@ flutter create --project-name=flutter_primeiro_projeto --org br.com.danielmorita
 - ElevatedButton.icon
 - InkWell: quanto nao quer ter nenhum espaços, ocupando o minimo.
 - Container criando do um botao customizado.
+
+## SingleChildScrollView e ListView
+
+- trabalhando com scroll.
+- ListView utilizar esse widget sempre que a lista é muito grande.

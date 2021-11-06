@@ -6,6 +6,8 @@ enum PopupMenuPages {
   media_query,
   layout_builder,
   botoes_rotacao_texto,
+  scrolls_single_child,
+  scrolls_list_view,
 }
 
 class HomePage extends StatelessWidget {
@@ -37,6 +39,12 @@ class HomePage extends StatelessWidget {
                   case PopupMenuPages.botoes_rotacao_texto:
                     Navigator.pushNamed(context, '/botoes_rotacao_texto');
                     break;
+                  case PopupMenuPages.scrolls_single_child:
+                    Navigator.pushNamed(context, '/scrolls/single_child');
+                    break;
+                  case PopupMenuPages.scrolls_list_view:
+                    Navigator.pushNamed(context, '/scrolls/list_view');
+                    break;
                 }
               },
               itemBuilder: (BuildContext context) {
@@ -60,6 +68,14 @@ class HomePage extends StatelessWidget {
                   PopupMenuItem<PopupMenuPages>(
                     child: Text('Botões Rotação Texto'),
                     value: PopupMenuPages.botoes_rotacao_texto,
+                  ),
+                  PopupMenuItem<PopupMenuPages>(
+                    child: Text('Scroll SingleChild'),
+                    value: PopupMenuPages.scrolls_single_child,
+                  ),
+                  PopupMenuItem<PopupMenuPages>(
+                    child: Text('Scroll ListView'),
+                    value: PopupMenuPages.scrolls_list_view,
                   ),
                 ];
               })
