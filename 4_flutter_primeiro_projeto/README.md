@@ -35,3 +35,7 @@ flutter create --project-name=flutter_primeiro_projeto --org br.com.danielmorita
 - ListView utilizar esse widget sempre que a lista é muito grande.
 
 ## Dialogs
+
+## Identificando a plataforma e mostrando o componente correto
+
+- Utilizar componentes especificos da plataforma.

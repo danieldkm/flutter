@@ -1,3 +1,6 @@
+import 'dart:io';
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_primeiro_projeto/pages/dialogs/dialog_custom.dart';
 
@@ -56,6 +59,26 @@ class DialogsPage extends StatelessWidget {
                 showDialog(
                   context: context,
                   builder: (context) {
+                    if (Platform.isIOS) {
+                      return CupertinoAlertDialog(
+                        title: Text('AlertDialog'),
+                        content: SingleChildScrollView(
+                          child: ListBody(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(10),
+                                child: Text('Desenha realmente salvar?'),
+                              ),
+                            ],
+                          ),
+                        ),
+                        actions: [
+                          TextButton(onPressed: () {}, child: Text('Cancelar')),
+                          TextButton(
+                              onPressed: () {}, child: Text('Confirmar')),
+                        ],
+                      );
+                    }
                     return AlertDialog(
                       title: Text('AlertDialog'),
                       content: SingleChildScrollView(
@@ -80,6 +103,18 @@ class DialogsPage extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () async {
+                if (Platform.isIOS) {
+                  showBottomSheet(
+                    context: context,
+                    builder: (context) {
+                      return CupertinoTimerPicker(
+                        onTimerDurationChanged: (value) =>
+                            print('O horario selecionado foi $value'),
+                      );
+                    },
+                  );
+                  return;
+                }
                 final selectedTime = await showTimePicker(
                   context: context,
                   initialTime: TimeOfDay.now(),
