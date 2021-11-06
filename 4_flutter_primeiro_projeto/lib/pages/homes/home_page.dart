@@ -4,6 +4,7 @@ enum PopupMenuPages {
   container,
   rows_columns,
   media_query,
+  layout_builder,
 }
 
 class HomePage extends StatelessWidget {
@@ -29,6 +30,9 @@ class HomePage extends StatelessWidget {
                   case PopupMenuPages.media_query:
                     Navigator.pushNamed(context, '/media_query');
                     break;
+                  case PopupMenuPages.layout_builder:
+                    Navigator.pushNamed(context, '/layout_builder');
+                    break;
                 }
               },
               itemBuilder: (BuildContext context) {
@@ -44,6 +48,10 @@ class HomePage extends StatelessWidget {
                   PopupMenuItem<PopupMenuPages>(
                     child: Text('MediaQuery'),
                     value: PopupMenuPages.media_query,
+                  ),
+                  PopupMenuItem<PopupMenuPages>(
+                    child: Text('LayoutBuilder'),
+                    value: PopupMenuPages.layout_builder,
                   ),
                 ];
               })

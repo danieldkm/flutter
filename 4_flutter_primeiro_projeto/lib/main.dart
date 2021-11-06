@@ -1,11 +1,17 @@
+import 'package:device_preview/device_preview.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_primeiro_projeto/pages/container/container_page.dart';
 import 'package:flutter_primeiro_projeto/pages/homes/home_page.dart';
+import 'package:flutter_primeiro_projeto/pages/layout_builder/layout_builder_page.dart';
 import 'package:flutter_primeiro_projeto/pages/media_query/media_query_page.dart';
 import 'package:flutter_primeiro_projeto/pages/rows_columns/rows_columns_page.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(DevicePreview(
+    enabled: false, //!kReleaseMode,
+    builder: (_) => MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -16,11 +22,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      useInheritedMediaQuery: true,
+      locale: DevicePreview.locale(context),
       routes: {
         '/': (_) => HomePage(),
         '/container': (_) => ContainerPage(),
         '/rows_columns': (_) => RowsColumnsPage(),
         '/media_query': (_) => MediaQueryPage(),
+        '/layout_builder': (_) => LayoutBuilderPage(),
       },
     );
   }
