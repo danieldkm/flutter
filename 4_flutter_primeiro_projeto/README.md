@@ -19,3 +19,12 @@ flutter create --project-name=flutter_primeiro_projeto --org br.com.danielmorita
 ## LayoutBuilder
 
 - sempre herda o tamanho do pai
+
+## Botões e Rotação de Texto
+
+- TextButton: botao de texto.
+- IconButton: com icone.
+- ElevatedButton
+- ElevatedButton.icon
+- InkWell: quanto nao quer ter nenhum espaços, ocupando o minimo.
+- Container criando do um botao customizado.
