@@ -47,3 +47,11 @@ flutter create --project-name=flutter_primeiro_projeto --org br.com.danielmorita
 - Tem apenas conhecimento do pai, não conhece o irmão ou abaixo dele.
 
 ## Snackbar (Mensagens para o usuário)
+
+## Trabalhando com formulários
+
+- TextFormField => tem validação
+- sempre dar dispose em qualquer `controller` que foi criado.
+- caso tenho mais de um `Form`, instanciar nova chave, nunca utilizar a mesma em outras instancias de Form.
+- maxLines => quando setado null, se o usuario didigar mais que o campo esta exibindo, automaticamente o flutter vai aumentar a altura do campo.
+- isDense => deixa o campo mais comprimido possivel.
