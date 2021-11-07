@@ -55,3 +55,5 @@ flutter create --project-name=flutter_primeiro_projeto --org br.com.danielmorita
 - caso tenho mais de um `Form`, instanciar nova chave, nunca utilizar a mesma em outras instancias de Form.
 - maxLines => quando setado null, se o usuario didigar mais que o campo esta exibindo, automaticamente o flutter vai aumentar a altura do campo.
 - isDense => deixa o campo mais comprimido possivel.
+
+## Lendo arquivo json do Assets
