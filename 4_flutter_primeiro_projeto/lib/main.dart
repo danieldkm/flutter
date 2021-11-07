@@ -10,6 +10,7 @@ import 'package:flutter_primeiro_projeto/pages/media_query/media_query_page.dart
 import 'package:flutter_primeiro_projeto/pages/rows_columns/rows_columns_page.dart';
 import 'package:flutter_primeiro_projeto/pages/scrolls/listview_page.dart';
 import 'package:flutter_primeiro_projeto/pages/scrolls/singlechildscrollview_page.dart';
+import 'package:flutter_primeiro_projeto/pages/snackbar/snackbar_page.dart';
 
 void main() {
   runApp(DevicePreview(
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter primeiro projeto',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.cyan,
       ),
       useInheritedMediaQuery: true,
       locale: DevicePreview.locale(context),
@@ -38,6 +39,7 @@ class MyApp extends StatelessWidget {
         '/scrolls/single_child': (_) => SinglechildscrollviewPage(),
         '/scrolls/list_view': (_) => ListViewPage(),
         '/dialogs': (_) => DialogsPage(),
+        '/snackbars': (_) => SnackbarPage(),
       },
     );
   }

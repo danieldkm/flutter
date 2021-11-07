@@ -39,3 +39,11 @@ flutter create --project-name=flutter_primeiro_projeto --org br.com.danielmorita
 ## Identificando a plataforma e mostrando o componente correto
 
 - Utilizar componentes especificos da plataforma.
+
+## BuildContext
+
+- Precisa passar o buildContext para registrar na arvore de componentes, para poder ser acessado.
+- Serve para encontrar uma classe
+- Tem apenas conhecimento do pai, não conhece o irmão ou abaixo dele.
+
+## Snackbar (Mensagens para o usuário)
