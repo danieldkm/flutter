@@ -59,3 +59,5 @@ flutter create --project-name=flutter_primeiro_projeto --org br.com.danielmorita
 ## Lendo arquivo json do Assets
 
 ## Stack
+
+## BottomNavigatorBar & IndexedStack
