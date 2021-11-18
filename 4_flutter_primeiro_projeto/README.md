@@ -57,3 +57,5 @@ flutter create --project-name=flutter_primeiro_projeto --org br.com.danielmorita
 - isDense => deixa o campo mais comprimido possivel.
 
 ## Lendo arquivo json do Assets
+
+## Stack
