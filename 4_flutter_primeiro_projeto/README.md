@@ -61,3 +61,5 @@ flutter create --project-name=flutter_primeiro_projeto --org br.com.danielmorita
 ## Stack
 
 ## BottomNavigatorBar & IndexedStack
+
+## CircleAvatar
