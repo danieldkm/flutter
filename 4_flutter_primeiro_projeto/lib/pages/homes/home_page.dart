@@ -145,7 +145,54 @@ class HomePage extends StatelessWidget {
               })
         ],
       ),
-      body: Container(),
+      body: Theme(
+        // data: ThemeData(primaryColor: Colors.blueGrey),
+        data: Theme.of(context).copyWith(
+          primaryColor: Colors.blueGrey,
+        ),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ElevatedButton(onPressed: () {}, child: Text('Botao')),
+              ContainerX(),
+              Container(
+                height: 100,
+                width: 100,
+                color: Theme.of(context).primaryColor,
+              ),
+              Builder(builder: (context) {
+                return Container(
+                  height: 100,
+                  width: 100,
+                  color: Theme.of(context).primaryColor,
+                );
+              }),
+              TextButton(
+                onPressed: () {},
+                child: Text('TESTE'),
+                style: TextButton.styleFrom(
+                  primary: Colors.black,
+                  textStyle: TextStyle(fontSize: 30),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class ContainerX extends StatelessWidget {
+  const ContainerX({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 100,
+      width: 100,
+      color: Theme.of(context).primaryColor,
     );
   }
 }
