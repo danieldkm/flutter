@@ -63,3 +63,13 @@ flutter create --project-name=flutter_primeiro_projeto --org br.com.danielmorita
 ## BottomNavigatorBar & IndexedStack
 
 ## CircleAvatar
+
+## Trabalhando com cores
+
+```dart
+
+    final cor = Colors.blue;
+    final cor = Colors.blue.withOpacity(0.5);
+    final cor = Color.fromRGBO(0, 0, 255, 1);
+    final cor = Color(0XFF45D1FD);
+```

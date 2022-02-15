@@ -4,6 +4,7 @@ import 'package:flutter_primeiro_projeto/pages/botoes_rotacao_texto/botoes_rotac
 import 'package:flutter_primeiro_projeto/pages/bottom_navigator_bar/bottom_navigator_bar_page.dart';
 import 'package:flutter_primeiro_projeto/pages/cidades_json/cidades_page.dart';
 import 'package:flutter_primeiro_projeto/pages/circle_avatar/circle_avatar_page.dart';
+import 'package:flutter_primeiro_projeto/pages/colors/colors_page.dart';
 import 'package:flutter_primeiro_projeto/pages/container/container_page.dart';
 import 'package:flutter_primeiro_projeto/pages/dialogs/dialogs_page.dart';
 import 'package:flutter_primeiro_projeto/pages/forms/forms_page.dart';
@@ -65,6 +66,7 @@ class MyApp extends StatelessWidget {
         '/stacks/2': (_) => StackPage2(),
         '/bottom_navigator_bar': (_) => BottomNavigatorBarPage(),
         '/circle_avatars': (_) => CircleAvatarPage(),
+        '/colors': (_) => ColorsPage(),
       },
     );
   }
