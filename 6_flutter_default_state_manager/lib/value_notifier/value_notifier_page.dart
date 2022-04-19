@@ -4,29 +4,25 @@ import 'package:currency_text_input_formatter/currency_text_input_formatter.dart
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-import 'widgets/imc_gauge.dart';
+import '../widgets/imc_gauge.dart';
 
-class ImcSetStatePage extends StatefulWidget {
-  const ImcSetStatePage({Key? key}) : super(key: key);
+class ValueNotifierPage extends StatefulWidget {
+  const ValueNotifierPage({Key? key}) : super(key: key);
 
   @override
-  State<ImcSetStatePage> createState() => _ImcSetStatePageState();
+  State<ValueNotifierPage> createState() => _ValueNotifierPage();
 }
 
-class _ImcSetStatePageState extends State<ImcSetStatePage> {
+class _ValueNotifierPage extends State<ValueNotifierPage> {
   final pesoEC = TextEditingController();
   final alturaEC = TextEditingController();
   final formKey = GlobalKey<FormState>();
-  var imc = 0.0;
+  var imc = ValueNotifier(0.0);
 
   void _calcularIMC({required double peso, required double altura}) async {
-    setState(() {
-      imc = 0;
-    });
-    await Future.delayed(Duration(seconds: 1));
-    setState(() {
-      imc = peso / pow(altura, 2);
-    });
+    imc.value = 0;
+    await Future.delayed(const Duration(seconds: 1));
+    imc.value = peso / pow(altura, 2);
   }
 
   @override
@@ -38,6 +34,9 @@ class _ImcSetStatePageState extends State<ImcSetStatePage> {
 
   @override
   Widget build(BuildContext context) {
+    print(
+        '---------------------------------------------------------------------');
+    print('Build_TELA');
     return Scaffold(
       appBar: AppBar(
         title: const Text('Imc SetState'),
@@ -49,7 +48,15 @@ class _ImcSetStatePageState extends State<ImcSetStatePage> {
             padding: const EdgeInsets.all(8.0),
             child: Column(
               children: [
-                ImcGauge(imc: imc),
+                ValueListenableBuilder<double>(
+                  valueListenable: imc,
+                  builder: (context, imcValue, child) {
+                    print(
+                        '---------------------------------------------------------------------');
+                    print('ValueListenableBuilder');
+                    return ImcGauge(imc: imcValue);
+                  },
+                ),
                 const SizedBox(
                   height: 20,
                 ),

@@ -39,6 +39,9 @@ class _ImcSetStatePageState extends State<ImcSetStatePage> {
 
   @override
   Widget build(BuildContext context) {
+    print(
+        '---------------------------------------------------------------------');
+    print('Build_TELA');
     return Scaffold(
       appBar: AppBar(
         title: const Text('Imc SetState'),
