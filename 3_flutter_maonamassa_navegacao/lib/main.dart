@@ -38,6 +38,14 @@ class MyApp extends StatelessWidget {
             ),
           );
         }
+        // não é necessário a não ser se tu tipar o retorno na chamada dessa page
+        // ex: Navigator.of(context).pushNamed<String>('/detalhe2')
+        // if (settings.name == '/detalhe2') {
+        //   return MaterialPageRoute<String>(
+        //     settings: settings,
+        //     builder: (context) => Detalhe2Page(),
+        //   );
+        // }
       },
       routes: {
         //   '/': (_) => HomePage(),
