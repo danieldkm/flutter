@@ -14,3 +14,8 @@
 
 - atualizar por reatividade.
 - atualizar uma parte de um elemento.
+
+## Change notifier
+
+- padrão observable
+- trabalha com classe externa, controller e quem o estado e ação da nossa pagina.

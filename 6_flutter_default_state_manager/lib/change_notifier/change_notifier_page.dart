@@ -2,28 +2,32 @@ import 'dart:math';
 
 import 'package:currency_text_input_formatter/currency_text_input_formatter.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_default_state_manager/change_notifier/change_notifier_controller.dart';
+import 'package:flutter_default_state_manager/widgets/imc_gauge.dart';
 import 'package:intl/intl.dart';
 
-import '../widgets/imc_gauge.dart';
-
-class ValueNotifierPage extends StatefulWidget {
-  const ValueNotifierPage({Key? key}) : super(key: key);
+class ChangeNotifierPage extends StatefulWidget {
+  const ChangeNotifierPage({Key? key}) : super(key: key);
 
   @override
-  State<ValueNotifierPage> createState() => _ValueNotifierPage();
+  State<ChangeNotifierPage> createState() => _ChangeNotifierPage();
 }
 
-class _ValueNotifierPage extends State<ValueNotifierPage> {
+class _ChangeNotifierPage extends State<ChangeNotifierPage> {
+  final controller = ChangeNotifierController();
   final pesoEC = TextEditingController();
   final alturaEC = TextEditingController();
   final formKey = GlobalKey<FormState>();
-  var imc = ValueNotifier(0.0);
 
-  void _calcularIMC({required double peso, required double altura}) async {
-    imc.value = 0;
-    await Future.delayed(const Duration(seconds: 1));
-    imc.value = peso / pow(altura, 2);
-  }
+  // void _calcularIMC({required double peso, required double altura}) async {
+  //   setState(() {
+  //     imc = 0;
+  //   });
+  //   await Future.delayed(Duration(seconds: 1));
+  //   setState(() {
+  //     imc = peso / pow(altura, 2);
+  //   });
+  // }
 
   @override
   void dispose() {
@@ -39,7 +43,7 @@ class _ValueNotifierPage extends State<ValueNotifierPage> {
     print('Build_TELA');
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Imc Value Notifier'),
+        title: const Text('Imc Change Notifier'),
       ),
       body: SingleChildScrollView(
         child: Form(
@@ -48,13 +52,13 @@ class _ValueNotifierPage extends State<ValueNotifierPage> {
             padding: const EdgeInsets.all(8.0),
             child: Column(
               children: [
-                ValueListenableBuilder<double>(
-                  valueListenable: imc,
-                  builder: (context, imcValue, child) {
+                AnimatedBuilder(
+                  animation: controller,
+                  builder: (context, child) {
                     print(
                         '---------------------------------------------------------------------');
-                    print('ValueListenableBuilder');
-                    return ImcGauge(imc: imcValue);
+                    print('AnimatedBuilder');
+                    return ImcGauge(imc: controller.imc);
                   },
                 ),
                 const SizedBox(
@@ -106,7 +110,7 @@ class _ValueNotifierPage extends State<ValueNotifierPage> {
                       double peso = formatter.parse(pesoEC.text) as double;
                       double altura = formatter.parse(alturaEC.text) as double;
 
-                      _calcularIMC(peso: peso, altura: altura);
+                      controller.calcularIMC(peso: peso, altura: altura);
                     }
                   },
                   child: const Text('Calcular IMC'),
