@@ -14,3 +14,10 @@ flutter create --project-name=desafio_flutter_maonamassa --org br.com.danielmori
 ```bash
 flutter create --project-name=flutter_default_state_manager --org br.com.danielmorita --platforms android,ios -a kotlin -i swift ./flutter_default_state_manager
 ```
+
+## Sqlite com Flutter
+
+```bash
+flutter create --project-name=flutter_sqlite --org br.com.danielmorita --platforms android,ios -a kotlin -i swift ./flutter_sqlite
+```
+
